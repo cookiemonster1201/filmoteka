@@ -1,0 +1,27 @@
+.team-modal {
+  position: relative;
+  left: 50%;
+  top: 50%;
+
+  height: 90%;
+  padding: 30px;
+  background: $background-color;
+
+  border-radius: 5px;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 767px) {
+    max-width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    max-height: 930px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+    max-height: 880px;
+  }
+}

@@ -1,0 +1,139 @@
+.auth-modal {
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 40px;
+
+  overflow: hidden;
+  background-color: $background-color;
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 450px;
+    max-height: 400px;
+    padding: 40px;
+    border-radius: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    max-width: 528px;
+  }
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../images/close.svg');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+
+  transition: transform 300ms ease;
+
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.modal__close-icon {
+  fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal__close-button:hover > &,
+  .modal__close-button:focus > & {
+    color: $accent-color;
+  }
+}
+
+.modal__appeal {
+  margin-bottom: 30px;
+  @include font(700, 18px, 22px, 0em);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+
+  &__field {
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: block;
+  }
+}
+
+.auth-form__input {
+  padding: 5px 10px 5px 42px;
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid $modal-input-color;
+  border-radius: 4px;
+  color: $footer-text-color;
+  transition: border-color 250ms linear;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    color: $accent-color;
+  }
+}
+
+.auth-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms linear;
+
+  .auth-form__input:focus + & {
+    fill: $accent-color;
+  }
+}
+
+.modal__close-button {
+  margin: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.auth-form__registration-appeal {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  @include font(500, 14px, 20px, 0em);
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

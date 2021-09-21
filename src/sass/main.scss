@@ -1,0 +1,21 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/button';
+@import './components/backdrop';
+@import './components/sosial-links';
+@import './components/team-modal';
+@import './components/loader';
+@import './components/movie-modal';
+@import './components/card-section-loader';
+@import './components/auth-modal';
+@import './components/dark-theme';
+
+@import './layout/header';
+@import './layout/card-section';
+@import './layout/footer';
+@import './layout/team';
